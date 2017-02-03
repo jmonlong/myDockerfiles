@@ -7,4 +7,10 @@ RUN apt-get update \
     libxml2-dev \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update \
+    && wget https://github.com/jgm/pandoc/releases/download/1.18/pandoc-1.18-1-amd64.deb \
+    && dpkg -i pandoc-1.18-1-amd64.deb \
+    && apt-get install -f \
+    && rm pandoc-1.18-1-amd64.deb
+
 CMD ["R"]
