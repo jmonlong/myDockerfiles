@@ -1,4 +1,4 @@
-FROM r-base:3.3.1
+FROM r-base:3.3.3
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -14,12 +14,14 @@ RUN apt-get update \
     && rm pandoc-1.18-1-amd64.deb
 
 RUN install2.r  -r https://cloud.r-project.org --deps TRUE \
-    devtools knitr rmarkdown magrittr dplyr RColorBrewer ggplot2 parallel tidyr ggdendro fpc formatR data.table \
+    devtools knitr rmarkdown magrittr dplyr RColorBrewer ggplot2 parallel tidyr ggdendro fpc formatR data.table moments broom ggrepel remotes outliers fdrtool\
     && rm -rf /tmp/downloaded_packages/
 
-RUN install2.r -r http://bioconductor.org/packages/3.0/bioc -r https://cloud.r-project.org --deps TRUE \
-    GenomicRanges Gviz BSgenome.Hsapiens.UCSC.hg19 Rsamtools DNAcopy \
+RUN install2.r -r http://bioconductor.org/packages/3.3/bioc -r https://cloud.r-project.org --deps TRUE \
+    GenomicRanges Gviz Rsamtools DNAcopy \
     && rm -rf /tmp/downloaded_packages/
+
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R")' -e 'biocLite("BSgenome.Hsapiens.UCSC.hg19")'
 
 RUN installGithub.r jmonlong/PopSV \
     && rm -rf /tmp/downloaded_packages/
