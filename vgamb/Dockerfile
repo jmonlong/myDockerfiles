@@ -31,4 +31,4 @@ RUN curl -L https://github.com/lh3/minimap2/releases/download/v2.17/minimap2-2.1
 
 ENV PATH=/home/minimap2-2.17_x64-linux/:$PATH
 
-ADD run-snakemake.sh /home
+ADD vgamb/run-snakemake.sh /home
