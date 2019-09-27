@@ -1,3 +1,5 @@
+install.packages('BiocManager')
+
 pkgs = c('VariantAnnotation',
          'GenomicRanges',
          'magrittr',
