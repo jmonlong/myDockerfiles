@@ -5,6 +5,7 @@ MAINTAINER jmonlong@ucsc.edu
 RUN apt-get update \
         && apt-get install -y --no-install-recommends \
         wget \
+        git \
         libxml2-dev libssl-dev libmariadbclient-dev libcurl4-openssl-dev \
         apt-transport-https software-properties-common dirmngr gpg-agent \
         && rm -rf /var/lib/apt/lists/*
