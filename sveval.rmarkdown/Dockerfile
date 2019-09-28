@@ -1,4 +1,4 @@
-FROM jmonlong/ubuntur
+FROM jmonlong/ubuntur@sha256:3cf0c3426c4413b61b9a2e3bab18b6312703bfcea6ccd018fcbf4d6a81cb63fa
 
 MAINTAINER jmonlong@ucsc.edu
 
