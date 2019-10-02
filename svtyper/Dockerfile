@@ -18,6 +18,7 @@ RUN apt-get update \
         python-dev \
         libbz2-dev liblzma-dev \
         zlib1g zlib1g-dev \
+        time \
         && rm -rf /var/lib/apt/lists/*
 
 RUN locale-gen en_US.UTF-8
