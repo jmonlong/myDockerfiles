@@ -22,6 +22,7 @@ RUN wget --no-check-certificate https://github.com/lh3/bwa/releases/download/v0.
         && cd bwa-0.7.17 \
         && make \
         && cp bwa /bin/ \
+        && cd .. \
         && rm -r bwa-0.7.17.tar.bz2 bwa-0.7.17
         
 ENTRYPOINT ["bwa"]
