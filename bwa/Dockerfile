@@ -5,7 +5,7 @@ MAINTAINER jmonlong@ucsc.edu
 RUN apt-get update \
         && apt-get install -y --no-install-recommends \
         wget \
-        bcftools \
+        bcftools samtools \
         tabix \
         gcc \
         git \
