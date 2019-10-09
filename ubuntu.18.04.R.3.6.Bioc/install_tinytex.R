@@ -1,5 +1,5 @@
 install.packages('tinytex')
-tinytex::install_tinytex()
+tinytex::install_tinytex(dir='/usr/.TinyTeX')
 
 tinytex::tlmgr_install(c('multirow', 'wrapfig', 'colortbl', 'tabu',
                          'varwidth', 'threeparttable', 'threeparttablex',

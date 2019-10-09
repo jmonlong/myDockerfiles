@@ -31,6 +31,11 @@ ADD install_tinytex.R /home
 
 RUN R -f /home/install_tinytex.R
 
-ENV PATH=/root/bin:$PATH
+RUN /usr/.TinyTeX/bin/*/tlmgr path add \
+        && chown -R root:staff /usr/.TinyTeX \
+        && chmod -R g+w /usr/.TinyTeX \
+        && chmod -R g+wx /usr/.TinyTeX/bin
+
+ENV PATH=/usr/.TinyTeX/bin/x86_64-linux:$PATH
 
 CMD ["R"]
