@@ -36,8 +36,8 @@ ENV PATH=/usr/local/RepeatMasker:$PATH
 
 WORKDIR /home
 
-ADD test.fa /home
+# ADD test.fa /home
 
-RUN RepeatMasker --species human test.fa
+# RUN RepeatMasker --species human test.fa
 
 CMD ['RepeatMasker']
