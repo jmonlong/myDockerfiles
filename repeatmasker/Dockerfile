@@ -7,6 +7,7 @@ RUN apt-get update \
         wget \
         hmmer \
         unzip \
+        gcc \ 
         build-essential \
         && rm -rf /var/lib/apt/lists/*
 
