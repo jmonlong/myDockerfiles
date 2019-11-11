@@ -8,10 +8,6 @@ ADD install.R /home
 
 RUN R -f /home/install.R
 
-RUN git clone https://github.com/jmonlong/sveval.git /home/sveval &&
-        cd /home/sveval && 
-        git reset --hard e6bc0ce16a3b99de7db871a6b18e738432d09873
-
-RUN R -e "devtools::install('/home/sveval')"
+RUN R -e "BiocManager::install('jmonlong/sveval@e6bc0ce16a3b99de7db871a6b18e738432d09873')"
 
 CMD ["R"]
