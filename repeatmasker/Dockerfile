@@ -39,5 +39,3 @@ WORKDIR /home
 # ADD test.fa /home
 
 # RUN RepeatMasker --species human test.fa
-
-CMD ['RepeatMasker']
