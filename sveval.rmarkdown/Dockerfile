@@ -8,6 +8,6 @@ ADD install.R /home
 
 RUN R -f /home/install.R
 
-RUN R -e "BiocManager::install('jmonlong/sveval@b346e2383194d2b47817d700011582c68059103c')"
+RUN R -e "BiocManager::install('jmonlong/sveval@3d05aeadeba375d1362dbc12eee6e42707d2dfd0')"
 
 CMD ["R"]
